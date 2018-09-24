@@ -14,7 +14,9 @@ $(document).ready(function () {
             console.log(response.data)
             for (var i = 0; i < results.length; i++) {
                 if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
-                    var gifImage = $("<img>");
+                    var gifImage = $("<img>Rating: "+ results[i].rating + "</img>");
+                    // var p = $("<p>");
+                    // p.text("Rating: " + results[i].rating);
                     gifImage.attr("src", results[i].images.fixed_height_still.url); //sets the source to the img element
                     gifImage.attr("data-still", results[i].images.fixed_height_still.url); //saves the data-still url as a value to the img element
                     gifImage.attr("data-animate", results[i].images.fixed_height.url); //saves the data-animate url as a value to the img element
@@ -28,7 +30,7 @@ $(document).ready(function () {
         return false;
     });
 
-    var gifs = ['Houston Astros', 'Steelers', 'ford raptor', 'Pizza', 'snes', 'Rockets', 'tron: legacy', 'iron man', 'great white shark', 'ford shelby']
+    var gifs = ['Houston Astros', 'Pizza','Legend of Zelda: Breath of the Wild', 'Ford Raptor', 'Super Nintendo Games', 'The Avengers', 'Spider-Man PS4', 'Funny Cat', 'Great White Shark', 'Ford Shelby']
     createButtons();
 
     function createButtons() {
@@ -50,11 +52,6 @@ $(document).ready(function () {
         var input = $("#submit-input").val().trim();
         gifs.push(input);
         createButtons();
-        // var b = $("<button>");
-        // b.addClass("myGifs")
-        //     .attr("data-name", input)
-        //     .text(input);
-        // $("#buttons").append(b);
         $("#submit-input").val('');
 
     });

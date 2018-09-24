@@ -1,0 +1,29 @@
+.myGifs{
+    margin: 10px;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.container{
+    background-image: linear-gradient(orange,yellow);
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 20px; 
+    margin-bottom: 10px;
+}
+
+button {
+    color: white;
+    background-color: black;
+    border-radius: 5px;
+    padding: 7px;
+    /* background-color: white; */
+}
+h1{
+    font-size: 60px;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    color: linear-gradient(red, yellow);
+}
+.gif{
+    padding: 5px;
+}
